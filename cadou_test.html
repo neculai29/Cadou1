@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surpriză pentru Ale</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+    h1, p {
+      color: #880e4f;
+    }
+    #wait, #message, #gift-box, #gift-reveal {
+      display: none;
+    }
+    button {
+      background-color: #d81b60;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #gift-box {
+      font-size: 70px;
+      margin-top: 30px;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+    }
+    #gift-reveal {
+      margin-top: 30px;
+    }
+    #gift-reveal img {
+      width: 90%;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="wait">
+  <h2>Așteaptă până la miezul nopții pentru o surpriză...</h2>
+</div>
+
+<div id="message">
+  <h1>🎉 Mesaj pentru Ale 🎉</h1>
+  <p style="white-space: pre-wrap; max-width: 600px; margin: auto;">
+Chiar nu știu cum au trecut aceste 4 luni. Pot să zic că au trecut foarte repede datorită ție, Ale.
+
+Au fost 4 luni cu suișuri și coborâșuri, dar, la finalul fiecărei zile, tot ajungem să vorbim și să râdem împreună.
+
+Nu sunt perfect, știu asta. Fiecare lucru pe care mi l-ai spus că te deranjează am încercat, cu timpul, să-l schimb treptat, ca să pot să-ți ofer ceea ce îți dorești.
+
+Îți înțeleg frustrările din perioada asta și prin ceea ce treci – știu că ceea ce faci nu e ușor. Poate că nu pot înțelege complet din „fundul patului”, dar tot ce fac, o fac pentru binele nostru.
+
+Ai un suflet bun și puternic, pe care îl apreciez și îl iubesc. Pot să spun doar că, prin iubirea noastră, putem trece peste orice. Te iubesc și îți mulțumesc că ești iubita mea. Pas cu pas, facem lucrurile mai bune împreună.
+
+P.S.: Dintr-o curte plină cu bujori, te-aș alege pe tine mereu.
+
+P.S.2: Ți-am pregătit un cadou – o plecare la munte (Sinaia). Ai nevoie să ieși puțin din Bucureștiul ăsta.
+  </p>
+  <button onclick="showGiftBox()">Vreau cadoul 🎁</button>
+</div>
+
+<div id="gift-box" onclick="revealGift()">
+  🎁
+</div>
+
+<div id="gift-reveal">
+  <h2>✨ Surpriză: Plecăm la munte (Sinaia)! ✨</h2>
+  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Cadou" />
+</div>
+
+<script>
+  // Pentru test afișăm mesajul direct (fără așteptare)
+  document.getElementById("wait").style.display = "none";
+  document.getElementById("message").style.display = "block";
+
+  function showGiftBox() {
+    document.getElementById("message").style.display = "none";
+    document.getElementById("gift-box").style.display = "block";
+  }
+
+  function revealGift() {
+    document.getElementById("gift-box").style.display = "none";
+    document.getElementById("gift-reveal").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
